@@ -6,6 +6,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { FormsModule } from '@angular/forms';
 import { SocketService } from './socket.service';
 import { CesarService } from './cesar.service';
+import { CyptoJsService } from './crypto.service';
 
 const config: SocketIoConfig = { url: 'https://3000-moccasin-catshark-m56wq53d.ws-eu03.gitpod.io/', options: {/*transport : ['websocket'], withCredentials:false*/} };
 
@@ -18,7 +19,7 @@ const config: SocketIoConfig = { url: 'https://3000-moccasin-catshark-m56wq53d.w
     SocketIoModule.forRoot(config),
     FormsModule
   ],
-  providers: [SocketService, CesarService],
+  providers: [SocketService, CesarService, CyptoJsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
