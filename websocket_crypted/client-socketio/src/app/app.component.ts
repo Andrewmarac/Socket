@@ -8,13 +8,17 @@ import { CesarService } from './cesar.service';
 })
 export class AppComponent {
   messageList:  string[] = [];
-  CesarService: any;
 
-  constructor(private socketService: SocketService) {
+
+  constructor(
+    private socketService: SocketService,
+    private cesarService: CesarService) {
   }
 
-   sendMessage(message: HTMLInputElement) {
-    let encoded = this.CesarService.encode(message.value, 10);
+
+    sendMessage(message: HTMLInputElement) {
+
+    let encoded = this.cesarService.encode(message.value, 10);
     this.socketService.sendMessage(encoded);
     //console.log("sent: " + message.value)
     message.value="";

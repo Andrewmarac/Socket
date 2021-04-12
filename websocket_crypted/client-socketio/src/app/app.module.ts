@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { SocketService } from './socket.service';
 import { CesarService } from './cesar.service';
 
-const config: SocketIoConfig = { url: 'https://3000-peach-cheetah-2wqmw590.ws-eu03.gitpod.io/', options: {/*transport : ['websocket'], withCredentials:false*/} };
+const config: SocketIoConfig = { url: 'https://3000-moccasin-catshark-m56wq53d.ws-eu03.gitpod.io/', options: {/*transport : ['websocket'], withCredentials:false*/} };
 
 @NgModule({
   declarations: [
